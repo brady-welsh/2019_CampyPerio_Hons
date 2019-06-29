@@ -1,0 +1,16 @@
+#!/bin/bash
+#SBATCH -p highmem
+#SBATCH -N 1
+#SBATCH -n 32
+#SBATCH --time=12:00:00
+#SBATCH --mem=500GB
+
+# Notification configuration 
+#SBATCH --mail-type=END
+#SBATCH --mail-type=FAIL
+#SBATCH --mail-user=brady.welsh@adelaide.edu.au
+
+# source activate BBmap
+
+dedupe2.sh \
+in={path to FastQ files for input} out={path to output directory} ac=f
