@@ -1,0 +1,20 @@
+#!/bin/bash
+#SBATCH -p batch            	                                
+#SBATCH -N 1               	                                
+#SBATCH -n 30              	                               
+#SBATCH --time=05:00:00    	                                
+#SBATCH --mem=64GB         	                              
+
+# Notification configuration 
+#SBATCH --mail-type=END					    	
+#SBATCH --mail-type=FAIL   					
+#SBATCH --mail-user=brady.welsh@adelaide.edu.au  	
+
+# module load parallel
+# source activate Knead
+
+.parallel -j 1 --link 'kneaddata -i {1} -i {2} \
+-o {path to output directory} \
+-db {path to kneaddata homo-sapien database} \
+-p 10 -t 32 --bypass-trim --remove-intermediate-output' \
+::: {path to pair 1} ::: {path to pair 2}
