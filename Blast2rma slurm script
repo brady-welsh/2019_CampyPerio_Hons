@@ -1,0 +1,24 @@
+#!/bin/bash
+#SBATCH -p highmem
+#SBATCH -N 1
+#SBATCH -n 32
+#SBATCH --time=14:00:00
+#SBATCH --mem=1500GB
+
+# Notification configuration 
+#SBATCH --mail-type=END
+#SBATCH --mail-type=FAIL
+#SBATCH --mail-user=brady.welsh@adelaide.edu.au
+
+# 1. Put all .blastn.gz files from malt-run and microbial .fastq files from 
+# kneaddata into a blast2rma input directory. use this directory for the top line
+
+# 2. make a blast2rma output file. use this directory for the -o argument
+
+# module load parallel
+# module load malt
+
+for i in {path to files}; \
+do b=${i%.fa*}.blastn.gz; echo blast2rma -r $i -i $b \
+-o {path to output directory} \
+-ms 44 -me 0.01 -f BlastText -alg weighted -lcp 80; done | parallel -j28 --delay 6
