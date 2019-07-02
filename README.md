@@ -25,6 +25,9 @@ run.
 
 ## Acknowlegements
 Dr. Laura Weyrich and Dr. Raphael Eisenhofer
+
 Australian Center of Ancient DNA (ACAD)
+
 My fellow Honours students
+
 The University of Adelaide
