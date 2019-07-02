@@ -1,4 +1,25 @@
-# campy-perio
-Honours project on oral Campylobacter spp. and periodontal disease
+Campy-Perio Project
+===================
 
-Currently slurm scripts used to submit jobs are stored here, small descriptors will be added here to detail the use of each script while also providing the script used, giving the ability to look upon, change and/or reuse at a later date.
+## Summary
+Honours project on oral Campylobacter spp. and their relation to periodontal disease
+
+> Welsh, Brady L.
+
+These notebooks provide detailed outlines for methods used throughout this project 
+including all code used for the processing and analysis of sequencing data.
+
+The files throughout this repository are numbered in the order in which they were
+run.
+
+
+## Data
+
+* ACAD sequence data
+  * Raw sequencing data (fastq format) obtained from the Australian Center of
+    Ancient DNA
+* HMP sequence data
+  * Raw sequencing data downloaded from the Human Microbiome Project website
+    (fastq format)
+* Metadata?
+  * Host metadata obtained from the Australian Center of Ancient DNA (if any)
