@@ -14,7 +14,6 @@ run.
 
 
 ## Data
-
 * ACAD sequence data
   * Raw sequencing data (fastq format) obtained from the Australian Center of
     Ancient DNA
@@ -23,3 +22,9 @@ run.
     (fastq format)
 * Metadata?
   * Host metadata obtained from the Australian Center of Ancient DNA (if any)
+
+## Acknowlegements
+Dr. Laura Weyrich and Dr. Raphael Eisenhofer
+Australian Center of Ancient DNA (ACAD)
+My fellow Honours students
+The University of Adelaide
