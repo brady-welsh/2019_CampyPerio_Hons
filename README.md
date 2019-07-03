@@ -2,7 +2,7 @@ Campy-Perio Project
 ===================
 
 ## Summary
-Honours project on oral Campylobacter spp. and their relation to periodontal disease
+Honours project on oral *Campylobacter* spp. and their relation to periodontal disease
 
 > Welsh, Brady L.
 
