@@ -1,3 +1,6 @@
+Processing Data
+================
+
 ## Goal
 To "clean" data provided by the Australian Center of Ancient DNA (ACAD) and downloaded from the HMP database.
 
