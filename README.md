@@ -6,8 +6,6 @@ Honours project on oral Campylobacter spp. and their relation to periodontal dis
 
 > Welsh, Brady L.
 
-> Supervisors: Dr. Laura Weyrich & Dr. Raphael Eisenhofer
-
 These notebooks provide detailed outlines for methods used throughout this project 
 including all code used for the processing and analysis of sequencing data.
 
@@ -26,7 +24,7 @@ run.
   * Host metadata obtained from the Australian Center of Ancient DNA (if any)
 
 ## Acknowlegements
-Dr. Laura Weyrich and Dr. Raphael Eisenhofer
+Supervisors: Dr. Laura Weyrich and Dr. Raphael Eisenhofer
 
 Australian Center of Ancient DNA (ACAD)
 
