@@ -54,6 +54,31 @@ In order to investigate the proportion of *Campylobacter* spp. in the sequenced 
     -mem load --mode BlastN -t 32 -v
 This script was then executed on the UofA's HPC; Phoenix, using `sbatch`
 
-Output from this script will be in .blastn format
+Output from this script will be in .blastn format.
 ## Analysis
 **3. Analysis in MEGAN**
+
+As the output from MALT comes in a .blastn format, the files must be converted to .rma6 format in order to be read by MEGAN. The blast2rma command comes in the MALT package and can be used for this conversion.
+
+To start all .blastn and processed .fastq files were moved to the same directory.
+Parallel was used to run the command on each file.
+
+    #!/bin/bash
+    #SBATCH -p highmem
+    #SBATCH -N 1
+    #SBATCH -n 32
+    #SBATCH --time=14:00:00
+    #SBATCH --mem=500GB
+   
+    # module load parallel
+    # module load malt
+    
+    for i in {path to .blastn & .fastq files}; \
+    do b=${i%.fa*}.blastn.gz; echo blast2rma -r $i -i $b \
+    -o {path to output directory} \
+    -ms 44 -me 0.01 -f BlastText -alg weighted -lcp 80; \
+    done | parallel -j28 --delay 6
+
+This script was then executed on the UofA's HPC; Phoenix, using `sbatch`
+
+These .rma6 files were then moved to a MEGAN server and opened in the MEGAN GUI.
