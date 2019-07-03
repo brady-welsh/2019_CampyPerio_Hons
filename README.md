@@ -5,6 +5,7 @@ Campy-Perio Project
 Honours project on oral Campylobacter spp. and their relation to periodontal disease
 
 > Welsh, Brady L.
+> Supervisors: Dr. Laura Weyrich & Dr. Raphael Eisenhofer
 
 These notebooks provide detailed outlines for methods used throughout this project 
 including all code used for the processing and analysis of sequencing data.
