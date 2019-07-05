@@ -40,6 +40,7 @@ The BBmap package was installed using Miniconda:
 This script was then executed on the UofA's HPC; Phoenix, using `sbatch`
 
 Program Versions:
+
 BBMap/36.62-intel-2017.01-Java-1.8.0_121
 #
 **2. Remove Human host reads**
@@ -67,7 +68,9 @@ KneadData is a program that is able to map all of the supplied sequences to a Hu
 This script was then executed on the UofA's HPC; Phoenix, using `sbatch`
 
 Program Versions:
+
 parallel/20180922-foss-2016b
+
 Kneaddata?
 #
 **3. Check Sequence Quality**
@@ -90,5 +93,6 @@ FastQC is a commonly used program when it comes to quality reassurance of sequen
 This script was then executed on the UofA's HPC; Phoenix, using `sbatch`
 
 Program Versions:
+
 fastqc/0.11.4
 #
