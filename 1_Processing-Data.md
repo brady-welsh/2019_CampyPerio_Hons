@@ -47,7 +47,11 @@ BBMap/36.62-intel-2017.01-Java-1.8.0_121
 
 Next the Human host reads were removed to ensure any Human sequences would not interfere with any subsequent alignments etc. Removal of these reads would reduce risk of misalignments leaving only microbial reads to be aligned.
 
-KneadData is a program that is able to map all of the supplied sequences to a Human reference genome and remove any sequences that match to this reference. After installation of a Human reference genome the Modern ACAD data was ran through KneadData to remove host contamination. The program Parallel was utilised to run the command on multiple input files using only a single command.
+KneadData is a program that is able to map all of the supplied sequences to a Human reference genome and remove any sequences that match to this reference. 
+
+`conda create -n Knead kneaddata p=3`
+
+After installation of a Human reference genome the Modern ACAD data was ran through KneadData to remove host contamination. The program Parallel was utilised to run the command on multiple input files using only a single command.
 
     #!/bin/bash
     #SBATCH -p batch
