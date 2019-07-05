@@ -60,10 +60,10 @@ KneadData is a program that is able to map all of the supplied sequences to a Hu
     # source activate Knead
     
     parallel -j 1 --link \
-    'kneaddata -i {1} -i {2} \
-    -o {path to output directory} \
-    -db {path to kneaddata homo-sapien database} \
-    -p 10 -t 32 --bypass-trim --remove-intermediate-output' \
+       'kneaddata -i {1} -i {2} \
+       -o {path to output directory} \
+       -db {path to kneaddata homo-sapien database} \
+       -p 10 -t 32 --bypass-trim --remove-intermediate-output' \
     ::: {path to pair 1} ::: {path to pair 2}
 This script was then executed on the UofA's HPC; Phoenix, using `sbatch`
 
