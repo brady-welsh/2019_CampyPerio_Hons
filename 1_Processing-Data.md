@@ -17,8 +17,8 @@ All acquired sequencing data had already undergone trimming to remove flanking s
 Duplicate reads provide redundant information and take up considerable memory during subsequent analysis. Removal of these sequences will ensure more accurate and memory efficient analysis.
 
 The BBmap package was installed using Miniconda:
- `conda create -c bioconda -n BBmap bbmap`
- which contained the dedupe2 program. This program was then utilised to remove the duplicate reads present in the Modern ACAD raw sequencing data.
+`conda create -c bioconda -n BBmap bbmap`
+which contained the dedupe2 program. This program was then utilised to remove the duplicate reads present in the Modern ACAD raw sequencing data.
  
 
     #!/bin/bash
