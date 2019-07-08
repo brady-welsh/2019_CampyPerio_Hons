@@ -31,9 +31,9 @@ which contained the dedupe2 program. This program was then utilised to remove th
     
     for i in *.fastq.gz;
     do 
-        dedupe2.sh in=$i \
-        out=$FASTDIR/ModernData/3_Dedupe_Output/Modern-ACAD-Oral-Reads/noncollapsed/${i%.fa*}_deduped.fastq.gz \
-        ac=f; 
+       dedupe2.sh in=$i \
+       out=$FASTDIR/ModernData/3_Dedupe_Output/Modern-ACAD-Oral-Reads/noncollapsed/${i%.fa*}_deduped.fastq.gz \
+       ac=f; 
     done
 
 This script was then executed on the UofA's HPC; Phoenix, using `sbatch`
