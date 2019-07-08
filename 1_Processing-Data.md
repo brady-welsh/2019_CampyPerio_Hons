@@ -71,7 +71,7 @@ Program Versions:
 
 parallel/20180922-foss-2016b
 
-Kneaddata?
+kneaddata v0.6.1
 #
 **3. Check Sequence Quality**
 
