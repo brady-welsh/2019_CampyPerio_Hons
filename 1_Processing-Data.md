@@ -19,9 +19,7 @@ Duplicate reads provide redundant information and take up considerable memory du
 The BBmap package was installed using Miniconda:
 `conda create -c bioconda -n BBmap bbmap`
 which contained the dedupe2 program. This program was then utilised to remove the duplicate reads present in the Modern ACAD raw sequencing data.
- 
 
-    #!/bin/bash
     #SBATCH -p highmem
     #SBATCH -N 1
     #SBATCH -n 16
@@ -29,12 +27,13 @@ which contained the dedupe2 program. This program was then utilised to remove th
     #SBATCH --mem=250GB
     
     # source activate BBmap
+    # run from directory containing fastq files
     
-    for i in {path to input fastq files};
+    for i in *.fastq.gz;
     do 
-      dedupe2.sh in=$i \
-      out={path to output directory} \
-      ac=f; 
+        dedupe2.sh in=$i \
+        out=$FASTDIR/ModernData/3_Dedupe_Output/Modern-ACAD-Oral-Reads/noncollapsed/${i%.fa*}_deduped.fastq.gz \
+        ac=f; 
     done
 
 This script was then executed on the UofA's HPC; Phoenix, using `sbatch`
