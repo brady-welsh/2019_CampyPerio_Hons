@@ -38,7 +38,8 @@ which contained the dedupe2 program. This program was then utilised to remove th
 
 This script was then executed on the UofA's HPC; Phoenix, using `sbatch`
 
-Program Versions:
+
+*Program Versions:*
 
 BBMap/36.62-intel-2017.01-Java-1.8.0_121
 #
@@ -66,7 +67,8 @@ KneadData is a program that is able to map all of the supplied sequences to a Hu
     ::: {path to pair 1} ::: {path to pair 2}
 This script was then executed on the UofA's HPC; Phoenix, using `sbatch`
 
-Program Versions:
+
+*Program Versions:*
 
 parallel/20180922-foss-2016b
 
@@ -91,7 +93,8 @@ FastQC is a commonly used program when it comes to quality reassurance of sequen
     -o {path to Ouput Directory} {path to Input .fastq Files}
 This script was then executed on the UofA's HPC; Phoenix, using `sbatch`
 
-Program Versions:
+
+*Program Versions:*
 
 fastqc/0.11.4
 #
