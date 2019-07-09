@@ -27,12 +27,12 @@ which contained the dedupe2 program. This program was then utilised to remove th
     #SBATCH --mem=250GB
     
     # source activate BBmap
-    # run from directory containing fastq files
+    # run from directory containing .fastq files
     
     for i in *.fastq.gz;
     do 
        dedupe2.sh in=$i \
-       out=$FASTDIR/ModernData/3_Dedupe_Output/Modern-ACAD-Oral-Reads/noncollapsed/${i%.fa*}_deduped.fastq.gz \
+       out=(path to output directory)/${i%.fa*}_deduped.fastq.gz \
        ac=f; 
     done
 
@@ -61,10 +61,10 @@ KneadData is a program that is able to map all of the supplied sequences to a Hu
     
     parallel -j 1 --link \
        'kneaddata -i {1} -i {2} \
-       -o {path to output directory} \
-       -db {path to kneaddata homo-sapien database} \
+       -o (path to output directory) \
+       -db (path to kneaddata homo-sapien database) \
        -p 10 -t 32 --bypass-trim --remove-intermediate-output' \
-    ::: {path to pair 1} ::: {path to pair 2}
+    ::: (path to pair 1) ::: (path to pair 2)
 This script was then executed on the UofA's HPC; Phoenix, using `sbatch`
 
 
@@ -90,7 +90,7 @@ FastQC is a commonly used program when it comes to quality reassurance of sequen
     # Module load FastQC
    
     fastqc -t 2 \
-    -o {path to Ouput Directory} {path to Input .fastq Files}
+    -o (path to Ouput Directory) (path to Input .fastq Files)
 This script was then executed on the UofA's HPC; Phoenix, using `sbatch`
 
 
