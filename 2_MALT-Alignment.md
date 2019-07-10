@@ -5,7 +5,7 @@ To align sequences from processed data with with a reference oral microbiome and
 
 ## Tasks
 
- 1. Produce a MALT index
+ 1. [Produce a MALT index](https://github.com/brady-welsh/campy-perio/blob/master/2_MALT-Alignment.md#1-produce-a-malt-index)
  2. Run data through MALT
  3. Analysis in MEGAN
 
