@@ -12,7 +12,7 @@ To align sequences from processed data with with a reference oral microbiome and
 Data used in these analysis is the final output from the "1_Processing-Data" section of this notebook.
 
 ## Scripts
-**1. Produce a MALT index**
+#### 1. Produce a MALT index
 
 MALT is able to align the input data to reference genomes in the form of an index. This index can contain multiple genomes such as the HOMD oral microbiome database, however, more sequences can be added to increase the specificity of the alignment. In this case a reference genome for each known species of oral *Campylobacter* will be added along with the HOMD database to produce a *Campylobacter* specific index.
 
@@ -34,7 +34,7 @@ The MALT package comes with two main components: `malt-build` for producing indi
     --sequenceType DNA -t 30 -v
 This script was then executed on the UofA's HPC; Phoenix, using `sbatch`
 #
-**2. Run data through MALT**
+#### 2. Run data through MALT
 
 In order to investigate the proportion of *Campylobacter* spp. in the sequenced oral microbiomes, they must be aligned to the reference index produced in the previous step. The second command in the MALT package `malt-run` will align the processed data to the reference index and determine which species each sequence belongs to.
 
@@ -56,7 +56,7 @@ This script was then executed on the UofA's HPC; Phoenix, using `sbatch`
 
 Output from this script will be in .blastn format.
 ## Analysis
-**3. Analysis in MEGAN**
+#### 3. Analysis in MEGAN
 
 As the output from MALT comes in a .blastn format, the files must be converted to .rma6 format in order to be read by MEGAN. The blast2rma command comes in the MALT package and can be used for this conversion.
 
