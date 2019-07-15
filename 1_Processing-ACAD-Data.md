@@ -13,7 +13,7 @@ To "clean" data provided by the Australian Center of Ancient DNA (ACAD)
 All acquired sequencing data had already undergone trimming to remove flanking sequences such as adapters.
 
 ## Scripts
-**1. Remove Human host reads**
+#### 1. Remove Human host reads
 
 Next the Human host reads were removed to ensure any Human sequences would not interfere with any subsequent alignments etc. Removal of these reads would reduce risk of misalignments leaving only microbial reads to be aligned.
 
@@ -44,7 +44,7 @@ parallel/20180922-foss-2016b
 
 kneaddata v0.6.1
 #
-**2. Remove Duplicate Reads**
+#### 2. Remove Duplicate Reads
 
 Duplicate reads provide redundant information and take up considerable memory during subsequent analysis. Removal of these sequences will ensure more accurate and memory efficient analysis.
 
@@ -75,7 +75,7 @@ This script was then executed on the UofA's HPC; Phoenix, using `sbatch`
 
 BBMap/36.62-intel-2017.01-Java-1.8.0_121
 #
-**5. Remove Low Complexity Reads**
+#### 3. Remove Low Complexity Reads
 Reads found within the raw sequencing data can cause errors in subsequent analysis such as the alignments. In order to remove these reads the pogram Komplexity can be used. The program was downloaded from the Anaconda cloud using miniconda `conda create -c eclarke -n Komplex komplexity`
 The following script was then used to remove the low complexity reads.
 
@@ -99,7 +99,7 @@ This script was then executed on the UofA's HPC; Phoenix, using `sbatch`
 
 komplexity-0.3.6-musl
 #
-**4. Check Sequence Quality**
+#### 4. Check Sequence Quality
 
 After the raw data was successfully processed and the unwanted sequencing data had been removed, the quality of the remaining sequences required confirmation.
 
