@@ -5,10 +5,10 @@ Processing Modern ACAD Data
 To "clean" data provided by the Australian Center of Ancient DNA (ACAD)
 
 ## Tasks
- 1. Remove Human host reads
- 2. Remove duplicate reads
- 3. Remove low complexity reads
- 4. Check sequence Quality
+ 1. [Remove Human host reads](https://github.com/brady-welsh/campy-perio/blob/master/1_Processing-ACAD-Data.md#1-remove-human-host-reads)
+ 2. [Remove duplicate reads](https://github.com/brady-welsh/campy-perio/blob/master/1_Processing-ACAD-Data.md#2-remove-duplicate-reads)
+ 3. [Remove low complexity reads](https://github.com/brady-welsh/campy-perio/blob/master/1_Processing-ACAD-Data.md#3-remove-low-complexity-reads)
+ 4. [Check sequence Quality](https://github.com/brady-welsh/campy-perio/blob/master/1_Processing-ACAD-Data.md#4-check-sequence-quality)
 
 All acquired sequencing data had already undergone trimming to remove flanking sequences such as adapters.
 
