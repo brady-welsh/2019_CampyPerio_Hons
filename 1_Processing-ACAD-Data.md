@@ -1,5 +1,5 @@
-Processing Data
-================
+Processing Modern ACAD Data
+===========================
 
 ## Goal
 To "clean" data provided by the Australian Center of Ancient DNA (ACAD)
