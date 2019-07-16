@@ -17,17 +17,15 @@ run.
 * ACAD sequence data
   * Raw sequencing data (fastq format) obtained from the Australian Center of
     Ancient DNA
+  * Metadata? 
 * HMP sequence data
   * Raw sequencing data downloaded from the Human Microbiome Project website
     (fastq format)
-* Metadata?
-  * Host metadata obtained from the Australian Center of Ancient DNA (if any)
+  * Metadata downloaded from the HMP website 
 
 ## Acknowlegements
 Supervisors: Dr. Laura Weyrich and Dr. Raphael Eisenhofer
 
 Australian Center of Ancient DNA (ACAD)
-
-My fellow Honours students
 
 The University of Adelaide
