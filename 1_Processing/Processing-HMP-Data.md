@@ -40,7 +40,7 @@ seqtk/1.3-foss-2016b
 #### 2. Remove Human Host Reads
 Next the Human host reads were removed to ensure any Human sequences would not interfere with any subsequent alignments etc. Removal of these reads would reduce risk of misalignments leaving only microbial reads to be aligned.
 
-KneadData is a program that is able to map all of the supplied sequences to a Human reference genome and remove any sequences that match to this reference conda create -n Knead kneaddata p=3. After downloading a Human reference genome the Modern ACAD data was ran through KneadData to remove host contamination. The program Parallel was utilised to run the command on multiple input files using only a single command.
+KneadData is a program that is able to map all of the supplied sequences to a Human reference genome and remove any sequences that match to this reference conda create -n Knead kneaddata p=3. After downloading a Human reference genome the HMP data was ran through KneadData to remove host contamination. The program Parallel was utilised to run the command on multiple input files using only a single command.
 
     #!/bin/bash
     #SBATCH -p batch
@@ -68,11 +68,11 @@ parallel/20180922-foss-2016b
 kneaddata v0.6.1
 #
 #### 3. Remove Duplicate Reads
- Duplicate reads provide redundant information and take up considerable memory during subsequent analysis. Removal of these sequences will ensure more accurate and memory efficient analysis.
+Duplicate reads provide redundant information and take up considerable memory during subsequent analysis. Removal of these sequences will ensure more accurate and memory efficient analysis.
 
 The BBmap package was installed using Miniconda:
 `conda create -c bioconda -n BBmap bbmap`
-which contained the dedupe2 program. This program was then utilised to remove the duplicate reads present in the Modern ACAD raw sequencing data.
+which contained the dedupe2 program. This program was then utilised to remove the duplicate reads present in the HMP raw sequencing data.
 
     #SBATCH -p highmem
     #SBATCH -N 1
