@@ -2,6 +2,7 @@ Processing HMP Data
 ===================
 
 ## Goal
+To "clean" data downloaded from the Human Microbiome Project (HMP) database.
 
 ## Tasks
  1. [Select random sample of sequences](https://github.com/brady-welsh/campy-perio/blob/master/1_Processing/Processing-HMP-Data.md#1-select-random-sample-of-sequences)
