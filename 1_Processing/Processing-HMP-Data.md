@@ -27,10 +27,10 @@ Seqtk was a module already loaded on the HPC; Phoenix, and therefore was loaded 
     
     # module load seqtk
     
-    for i in /fast/users/a1688124/3_HMP_Modern/1_Processing/1_RawData/Paired_Reads/*fastq.gz;
+    for i in (path to input .fastq files);
     do
-    seqtk sample -s2606 \
-    $i 2000000 > ${i/.fastq/-2Mss.fastq};
+      seqtk sample -s2606 \
+      $i 2000000 > ${i/.fastq/-2Mss.fastq};
     done
 This script was then executed on the UofA's HPC; Phoenix, using `sbatch`
 
