@@ -17,7 +17,13 @@ Data used in these analysis is the final output from the "1_Processing-Data" sec
 MALT is able to align the input data to reference genomes in the form of an index. This index can contain multiple genomes such as the HOMD oral microbiome database, however, more sequences can be added to increase the specificity of the alignment. In this case a reference genome for each known species of oral *Campylobacter* will be added along with the HOMD database to produce a *Campylobacter* specific index.
 
 The MALT package comes with two main components: `malt-build` for producing indicies and `malt-run` for running the alignment. MALT was already a module available on Phoenix and therefore installation was not necessary and instead only the 
-`module load malt` command was needed. Databases for the index were downloaded from the *e*HOMD website and NCBI. A whole oral microbiome reference metagenome was obtained from *e*HOMD and a whole genome reference for each oral *Campylobacter* species was downloaded from NCBI. These genomes were then ran through malt-build.
+`module load malt` command was needed. Databases for the index were downloaded from the *e*HOMD website and NCBI. A whole oral microbiome reference metagenome was obtained from *e*HOMD and as well as 247 *Campylobacter* complete reference sequences downloaded from NCBI.
+
+Campylobacter reference sequences were downloaded from NCBI using `ncbi-genome-download` installed using `conda` from the Anaconda cloud. Script run to download refseqs: 
+
+`ncbi-genome-download --format fasta --genus Campylobacter bacteria --assembly-level complete`
+
+The reference sequences where then compiled in the same directory to be ran through `malt-build` using the following script:
 
     #!/bin/bash
     #SBATCH -p highmem
