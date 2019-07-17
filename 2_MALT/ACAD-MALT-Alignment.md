@@ -54,7 +54,7 @@ ncbi-genome-download
 #
 #### 2. Run data through MALT
 
-In order to investigate the proportion of *Campylobacter* spp. in the sequenced oral microbiomes, they must be aligned to the reference index produced in the previous step. The second command in the MALT package `malt-run` will align the processed data to the reference index and determine which species each sequence belongs to.
+In order to investigate the proportion of *Campylobacter* spp. in the sequenced oral microbiomes, they must be aligned to the reference indices produced in the previous step. The second command in the MALT package `malt-run` will align the processed data to the reference index and determine which species each sequence belongs to.
 
     #!/bin/bash
     #SBATCH -p highmem
@@ -68,7 +68,7 @@ In order to investigate the proportion of *Campylobacter* spp. in the sequenced 
     malt-run -i (path to input fastq files) \
     -a (path to output directory) \
     -ou (path to output directory) \
-    -at SemiGlobal -f Text -d (path to directory containing matrix) \
+    -at SemiGlobal -f Text -d (path to directory containing MALT index) \
     -mem load --mode BlastN -t 32 -v
 This script was then executed on the UofA's HPC; Phoenix, using `sbatch`
 
