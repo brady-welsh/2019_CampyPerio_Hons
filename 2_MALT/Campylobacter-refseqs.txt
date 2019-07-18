@@ -2924,5 +2924,3 @@ GCF_900638335.1_57141_E01_genomic.fna.gz
 GCF_900638365.1_57428_D01_genomic.fna.gz
 GCF_900638675.1_58225_E01_genomic.fna.gz
 GCF_900699785.1_B91_SC_genomic.fna.gz
-NCBI-GD_AllNames.txt
-filename.txt
