@@ -23,7 +23,7 @@ Campylobacter reference sequences were downloaded from NCBI using `ncbi-genome-d
 
 `ncbi-genome-download --format fasta --genus Campylobacter bacteria --assembly-level complete`
 
-The reference sequences where then compiled in the same directory to be ran through `malt-build` using the following script:
+The reference sequences (listed in Campylobacter-complete-refseqs.txt) where compiled in the same directory to be ran through `malt-build` using the following script:
 
     #!/bin/bash
     #SBATCH -p highmem
@@ -44,7 +44,7 @@ Another MALT index was produced using complete and incomplete *Campylobacter* as
 
 `ncbi-genome-download --format fasta --genus Campylobacter bacteria`
 
-2927 *Campylobacter* genomes were downloaded and compiled into a directory with the HOMD oral-microbiome database. The `malt-build` script above was then run using these sequences to align to the modern data.
+2927 *Campylobacter* genomes were downloaded (listed in Campylobacter-All-refseqs.txt) and compiled into a directory with the HOMD oral-microbiome database. The `malt-build` script above was then run using these sequences to align to the modern data.
 
 *Program Versions:*
 
