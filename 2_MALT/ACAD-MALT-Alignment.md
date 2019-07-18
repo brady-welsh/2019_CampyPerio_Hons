@@ -19,7 +19,7 @@ MALT is able to align the input data to reference genomes in the form of an inde
 The MALT package comes with two main components: `malt-build` for producing indicies and `malt-run` for running the alignment. MALT was already a module available on Phoenix and therefore installation was not necessary and instead only the 
 `module load malt` command was needed. Databases for the index were downloaded from the *e*HOMD website and NCBI. A whole oral microbiome reference metagenome was obtained from *e*HOMD and as well as 247 *Campylobacter* complete reference sequences downloaded from NCBI.
 
-Campylobacter reference sequences were downloaded from NCBI using `ncbi-genome-download` installed using `conda` from the Anaconda cloud. Script run to download refseqs: 
+247 complete *Campylobacter* reference sequences were downloaded from NCBI using `ncbi-genome-download` installed using `conda` from the Anaconda cloud. Script run to download refseqs: 
 
 `ncbi-genome-download --format fasta --genus Campylobacter bacteria --assembly-level complete`
 
