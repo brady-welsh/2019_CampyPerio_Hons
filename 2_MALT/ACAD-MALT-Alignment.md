@@ -44,7 +44,7 @@ Another MALT index was produced using complete and incomplete *Campylobacter* as
 
 `ncbi-genome-download --format fasta --genus Campylobacter bacteria`
 
-4000 *Campylobacter* genomes were downloaded and compiled into a directory with the HOMD oral-microbiome database. The `malt-build` script above was then run using these sequences to align to the modern data.
+2927 *Campylobacter* genomes were downloaded and compiled into a directory with the HOMD oral-microbiome database. The `malt-build` script above was then run using these sequences to align to the modern data.
 
 *Program Versions:*
 
