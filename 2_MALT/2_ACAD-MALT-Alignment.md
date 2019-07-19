@@ -1,4 +1,4 @@
-MALT Alignment
+ACAD Data: MALT Alignment
 =============
 ## Goal
 To align sequences from processed data with with a reference oral microbiome and begin calculating the proportion of *Campylobacter* reads sequenced.
