@@ -5,7 +5,7 @@ To produce indices containing reference genomes of both the oral microbiota as w
 
 ## Tasks
 
- 1. [Produce a MALT index]()
+ 1. [Produce a MALT index](https://github.com/brady-welsh/campy-perio/blob/master/2_MALT/1_MALT-Build.md#produce-a-malt-index)
 
 ## Scripts
 #### Produce a MALT index
