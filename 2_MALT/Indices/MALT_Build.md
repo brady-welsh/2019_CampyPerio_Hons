@@ -1,6 +1,6 @@
 #### Produce a MALT index
 
-MALT is able to align the input data to reference genomes in the form of an index. This index can contain multiple genomes such as the HOMD oral microbiome database, however, more sequences can be added to increase the specificity of the alignment. In this case a reference genome for each known species of oral *Campylobacter* will be added along with the HOMD database to produce a *Campylobacter* specific index.
+MALT is able to align the input data to reference genomes in the form of an index. This index can contain multiple genomes such as the HOMD oral microbiome database, however, more sequences can be added to increase the specificity of the alignment. In this case reference genomes for each known species of *Campylobacter* will be added along with the HOMD database to produce a *Campylobacter* specific index.
 
 The MALT package comes with two main components: `malt-build` for producing indicies and `malt-run` for running the alignment. MALT was already a module available on Phoenix and therefore installation was not necessary and instead only the 
 `module load malt` command was needed. Databases for the index were downloaded from the *e*HOMD website and NCBI. A whole oral microbiome reference metagenome was obtained from *e*HOMD and as well as 247 *Campylobacter* complete reference sequences downloaded from NCBI.
