@@ -1,3 +1,13 @@
+ACAD Data: MALT Alignment
+=============
+## Goal
+To produce indices containing reference genomes of both the oral microbiota as well as strengthening the specificity for *Campylobacter* species to achieve maximum efficiency alignments.
+
+## Tasks
+
+ 1. [Produce a MALT index]()
+
+## Scripts
 #### Produce a MALT index
 
 MALT is able to align the input data to reference genomes in the form of an index. This index can contain multiple genomes such as the HOMD oral microbiome database, however, more sequences can be added to increase the specificity of the alignment. In this case reference genomes for each known species of *Campylobacter* will be added along with the HOMD database to produce a *Campylobacter* specific index.
