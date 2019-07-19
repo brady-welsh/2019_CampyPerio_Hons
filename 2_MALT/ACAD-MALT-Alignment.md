@@ -8,12 +8,12 @@ To align sequences from processed data with with a reference oral microbiome and
  1. [Run data through MALT](https://github.com/brady-welsh/campy-perio/blob/master/2_MALT-Alignment.md#2-run-data-through-malt)
  2. [Analysis in MEGAN](https://github.com/brady-welsh/campy-perio/blob/master/2_MALT-Alignment.md#3-analysis-in-megan)
 
-Data used in these analysis is the final output from the "1_Processing-Data" section of this notebook.
+Data used in these analysis is the final output from the "1_Processing-Data" section of this notebook and information of indices used for the alignment can be found in the "Indices" folder.
 
 ## Scripts
 #### 1. Run data through MALT
 
-In order to investigate the proportion of *Campylobacter* spp. in the sequenced oral microbiomes, they must be aligned to the reference indices produced in the previous step. The second command in the MALT package `malt-run` will align the processed data to the reference index and determine which species each sequence belongs to.
+In order to investigate the proportion of *Campylobacter* spp. in the sequenced oral microbiomes, they must be aligned to the reference indices produced using `malt-build`. The second command in the MALT package `malt-run` will align the processed data to the reference index and determine which species each sequence belongs to. This script will be twice, using one of the two MALT indices produced per alignment.
 
     #!/bin/bash
     #SBATCH -p highmem
@@ -32,6 +32,7 @@ In order to investigate the proportion of *Campylobacter* spp. in the sequenced 
 This script was then executed on the UofA's HPC; Phoenix, using `sbatch`
 
 Output from this script will be in .blastn format.
+#
 ## Analysis
 #### 2. Analysis in MEGAN
 
@@ -59,4 +60,4 @@ Parallel was used to run the command on each file.
 
 This script was then executed on the UofA's HPC; Phoenix, using `sbatch`
 
-These .rma6 files were then moved to a MEGAN server and opened in the MEGAN GUI.
+These .rma6 files were then moved to a MEGAN server and opened in the MEGAN GUI. In MEGAN the alignments can be visualised and the proportions of each taxa present in the samples can be seen.
