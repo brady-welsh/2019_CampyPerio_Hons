@@ -7,7 +7,7 @@ To profile the levels of identifiable strains of *Campylobacter showae* to disco
 
 1. [Produce .sam files of samples]()
 2. [Convert samples to markers]()
-3. [Produce a BLAST database]()
+3. [Files for BLAST database]()
 4. [Identify present strains using StrainPhlAn]()
 
 ## Scripts
@@ -38,7 +38,20 @@ To produce these `.markers` files, the program `sample2marker` present in the Me
     done
 The resulting `.markers` files were then used for the following database production and StrainPhlAn analysis.
 #
-#### Produce a BLAST database
+#### Files for BLAST database
+Before running the markers through StrainPhlAn, a BLAST database for *Campylobacter showae* had to first be produced. Using the added database, the StrainPhlAn program would have an increased specificity for *C. showae* markers.
+The first step in producing the BLAST database is to use bowtie2 to produce a `.fasta` file containing all of the markers in the MetaPhlAn2 database: mpa_v20_m200:
+
+    bowtie2-inspect ${mpa_dir}/db_v20/mpa_v20_m200 > all_markers.fasta
+
+Then using this `all_markers.fasta` file, the clade specific markers for *C. showae* could be extracted using the `extract_markers.py` command which is also included in the MetaPhlAn conda package:
+
+    extract_markers.py \
+	    --mpa_pkl ${mpa_dir}/db_v20/mpa_v20_m200.pkl \
+	    --ifn_markers all_markers.fasta --clade s__Campylobacter_showae \
+	    --ofn_markers s__Campylobacter_showae.markers.fasta
+
+This output contains all of the *C. showae* specific markers in the MetaPhlAn2 built-in database and can then be collated with an NCBI reference genome to further the specificity of the database. This database would be built using the program `makeblastdb` which requires the BLAST+ tools package (downloaded using miniconda: `conda install blast -c bioconda`). This tool runs simultaneously with the StrainPhlAn program provided each of the required files is supplied.
 
 #
 #### Identify present strains using StrainPhlAn
