@@ -75,11 +75,12 @@ RAxML was loaded on the HPC using `module load RAxML`
     raxmlHPC-HYBRID-SSE3 \
 	    -f a \
 	    --threads 16 \
-	    -x 2606 \
-	    -p 2606 \
+	    -x {random seed} # 2606 used \
+	    -p {random seed} # 2606 used \
 	    -# autoMRE \
 	    -m GTRGAMMA \
-	    -s /localscratch/bwelsh/4_PocketHealthy/2_StrainPhlAn/s__Campylobacter_showae.fasta -n RAxML_Both
+	    -s {path to strainphlan output}/s__Campylobacter_showae.fasta \
+	    -n {output name}
 
 The susequent tree files were then opned in FigTree for analysis of strain presence and diversity.
 #
