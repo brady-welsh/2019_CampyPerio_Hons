@@ -1,4 +1,4 @@
-ACAD Data: MALT Alignment
+MALT Alignment
 =============
 ## Goal
 To align sequences from processed data with with a reference oral microbiome and begin calculating the proportion of *Campylobacter* reads sequenced.
@@ -13,7 +13,7 @@ Data used in these analysis is the final output from the "1_Processing-Data" sec
 ## Scripts
 #### 1. Run data through MALT
 
-In order to investigate the proportion of *Campylobacter* spp. in the sequenced oral microbiomes, they must be aligned to the reference indices produced using `malt-build`. The second command in the MALT package `malt-run` will align the processed data to the reference index and determine which species each sequence belongs to. This script will be twice, using one of the two MALT indices produced per alignment.
+In order to investigate the proportion of *Campylobacter* spp. in the sequenced oral microbiomes, they must be aligned to the reference indices produced using `malt-build`. The second command in the MALT package `malt-run` will align the processed data to the reference index and determine which species each sequence belongs to. This script will be run twice, using one of the two MALT indices produced per alignment.
 
     #!/bin/bash
     #SBATCH -p highmem
