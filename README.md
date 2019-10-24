@@ -20,8 +20,8 @@ run.
 * HMP sequence data
   * Raw sequencing data (fastq format) downloaded from the Human Microbiome Project website
   * Metadata downloaded from the HMP website 
-* Ancient Sequence data
-  * Raw sequencing data (fastq format) obtained from the Australian Center of Ancient DNA
+* Periodontal Pocket sequence data
+  * Processed sequencing data (fasta format) downloaded from project completed by Shi *et al.* (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5938363/)
 
 ## Acknowlegements
 Supervisors: Dr. Laura Weyrich and Dr. Raphael Eisenhofer
