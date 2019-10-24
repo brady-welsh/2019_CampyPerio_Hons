@@ -55,3 +55,31 @@ This output contains all of the *C. showae* specific markers in the MetaPhlAn2 b
 
 #
 #### Identify present strains using StrainPhlAn
+Following all of the prerequisite steps the files produced from aforementioned scripts were then put through the `strainphlan.py` program to perform the strain-level alignment specific for *Campylobacter showae*
+
+    strainphlan.py \
+	    --ifn_samples {path to input}/*.markers \
+		--ifn_markers {path to showae markers}/s_Campylobacter_showae-v293CHOCOPhlAn.markers.fasta \
+		--ifn_ref_genomes {path to showae reference genome}/Campylobacter-showae.fna.gz \
+		--output_dir {path to output directory} \
+		--clades s_Campylobacter_showae --nprocs_main 16
+		--relaxed_parameters2
+
+This produced several .tree and .fasta alignment files which could be used for the bootstrapping and visualisation with RAxML and Figtree
+#
+#### Boostrapping and Tree Production
+Finally, the fasta alignment files from the StrainPhlAn strain-level alignment were then ran through the following RAxML script to calculate bootstrapping support for the alignments and produce .tree files which could be opened and visualised in FigTree (v1.1.4)
+
+RAxML was loaded on the HPC using `module load RAxML`
+
+    raxmlHPC-HYBRID-SSE3 \
+	    -f a \
+	    --threads 16 \
+	    -x 2606 \
+	    -p 2606 \
+	    -# autoMRE \
+	    -m GTRGAMMA \
+	    -s /localscratch/bwelsh/4_PocketHealthy/2_StrainPhlAn/s__Campylobacter_showae.fasta -n RAxML_Both
+
+The susequent tree files were then opned in FigTree for analysis of strain presence and diversity.
+#
